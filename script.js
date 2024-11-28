@@ -14,5 +14,5 @@ document.getElementById("btn").addEventListener("click", async () => {
   });
 
   const result = await promise;
-  output.textContent = val + " - " + del;
+  output.textContent = val ;
 });
