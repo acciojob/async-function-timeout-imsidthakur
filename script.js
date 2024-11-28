@@ -7,10 +7,11 @@ document.getElementById("btn").addEventListener("click", async () => {
 
   const promise = new Promise((res, rej) => {
     setTimeout(() => {
-      output.textContent = val + " - " + del;
-      res();
+      res({val,del});
     }, del * 1000);
   });
 
-  await promise
+  await promise.then((res)=> {
+      output.textContent = res.val + " - " + res.del;
+  })
 });
