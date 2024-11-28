@@ -9,7 +9,7 @@ document.getElementById("btn").addEventListener("click",()=>{
   const del =  Number(form.delay.value);
   
   setTimeout(function() {
-    output.textContent = val + " - " + del;
+    output.textContent = val + "-" + del;
   }, del*1000);
 })
 
