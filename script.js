@@ -10,6 +10,6 @@ document.getElementById("btn").addEventListener("click",()=>{
   
   setTimeout(function() {
     output.textContent = val + " - " + del;
-  }, del);
+  }, del*1000);
 })
 
