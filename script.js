@@ -10,7 +10,7 @@ document.getElementById("btn").addEventListener("click", async () => {
   const promise = new Promise((resolve) => {
     setTimeout(() => {
       resolve(val); 
-    }, del * 1000);
+    }, del);
   });
 
   const result = await promise;
