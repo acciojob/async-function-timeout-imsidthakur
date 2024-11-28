@@ -2,16 +2,17 @@ const form = document.getElementsByTagName("form")[0];
 const output = document.getElementById("output");
 
 document.getElementById("btn").addEventListener("click", async () => {
+   event.preventDefault(); 
+
   const val = form.elements.text.value; 
   const del = Number(form.elements.delay.value); 
 
-  const promise = new Promise((res, rej) => {
+  const promise = new Promise((resolve) => {
     setTimeout(() => {
-      res({val,del});
+      resolve(val); 
     }, del * 1000);
   });
 
-  await promise.then((res)=> {
-      output.textContent = res.val + " - " + res.del;
-  })
+  const result = await promise;
+  output.textContent = val + " - " + del;
 });
